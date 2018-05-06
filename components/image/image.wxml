@@ -1,0 +1,10 @@
+<!-- image.wxml -->
+<!-- 图片渐显加载 -->
+<wxs src="../../wxs/app.wxs" module="app" />
+
+<view class="image image-class" style="width: {{contain ? '100%': width}}; height: {{contain ? '100%': height}}; {{style}}">
+  <view class="image-cover" style="background-color: {{coverColor}}; opacity: {{coverOpacity}}" />
+  <view class="image-self" style="background-image: url({{src}}); background-size: {{size}}; background-position: {{position}}">
+    <image src="{{src}}" bindload="handleLoad" lazy-load="{{lazyLoad}}" />
+  </view>
+</view>

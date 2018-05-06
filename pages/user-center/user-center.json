@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cut": "../../components/cut/cut",
+    "component-image": "../../components/image/image",
+    "card": "../../components/card/card"
+  }
+}

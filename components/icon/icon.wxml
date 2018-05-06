@@ -1,0 +1,2 @@
+<text wx:if="{{active}}" class="twitter twitter-{{icon}} active" style="font-size: {{size}}rpx;" />
+<text wx:else class="twitter twitter-{{icon}}" style="font-size: {{size}}rpx;" />

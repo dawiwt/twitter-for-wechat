@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<template name="timeline">
+  <view class="timeline">
+    <block wx:for="{{tweets}}" wx:key="index">
+      <card tweet="{{item}}" user="{{users[item.user_id_str]}}" />
+    </block>
+  </view>
+</template>
+
+<view class="nav {{navClass}}">
+  <view class="nav-header">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{title}}</text>
+  </view>
+  <view class="nav-menu">
+    <block wx:for="{{['home', 'search', 'notification', 'message']}}" wx:key="index">
+      <view class="menu {{menuIndex === index ? 'menu-active':''}}" hover-class="menu-hover" data-index="{{index}}" bind:tap="menuTap">
+        <component-icon icon="{{item}}" active="{{menuIndex === index}}" size="50" />
+      </view>
+    </block>
+  </view>
+</view>
+<view class="container">
+  <view class="body">
+    <drop-down-refresh wx:if="{{menuIndex===0}}" external-class="drop-down-refresh" auto-first-refresh bind:onpulldownrefresh="handlepulldownrefresh"
+      bind:onscroll="handleonpulldownscroll">
+      <template is="timeline" data="{{tweets, users}}" />
+    </drop-down-refresh>
+  </view>
+</view>

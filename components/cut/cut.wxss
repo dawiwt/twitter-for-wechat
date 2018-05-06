@@ -1,0 +1,4 @@
+.cut {
+  height: 18rpx;
+  background-color: rgb(230, 236, 240);
+}

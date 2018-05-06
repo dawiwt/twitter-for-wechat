@@ -1,0 +1,51 @@
+<wxs src="../../wxs/app.wxs" module="app" />
+<view class="card" hover-class="hover">
+  <view class="card-header">
+    <navigator hover-class="none" url="/pages/user-center/user-center?screen_name={{user.screen_name}}&name={{user.name}}">
+      <component-image image-class="head-image" width="88rpx" height="88rpx" src="http://www.dawiwt.com/images/twitter/{{user.screen_name}}.jpg"
+      />
+    </navigator>
+  </view>
+  <view class="card-body">
+    <view class="card-author">
+      <navigator hover-class="none" class="author-center" url="/pages/user-center/user-center?screen_name={{user.screen_name}}&name={{user.name}}">
+        <text class="card-username">{{user.name}}</text>
+        <view class="card-userid">@{{user.screen_name}}</view>
+      </navigator>
+      <text class="card-round">·</text>
+      <text class="card-time">{{app.date(user.created_at)}}</text>
+    </view>
+    <navigator hover-class="none" url="/pages/user-center/user-center?screen_name={{user.screen_name}}&name={{user.name}}">
+      <view class="card-text">{{app.formatFullText(tweet.full_text)}}</view>
+    </navigator>
+    <view wx:if="{{tweet.entities.media}}" class="card-photo" style="overflow: hidden;">
+      <view class="photo-fill" />
+      <view class="photo-center">
+        <block wx:for="{{medias}}" wx:key="index">
+          <view class="photo-wrap">
+            <block wx:for="{{item}}" wx:for-item="media" wx:key="index">
+              <component-image class="photo-image" contain src="{{app.formatMediaUrl(media.media_url)}}" />
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="card-footer">
+      <view bind:tap="replyTap">
+        <component-icon class="footer-icon" icon="reply" size="40" />
+        <text>{{tweet.reply_count}}</text>
+      </view>
+      <view>
+        <component-icon class="footer-icon" icon="retweet" size="40" />
+        <text>{{tweet.retweet_count}}</text>
+      </view>
+      <view bind:tap="favoriteTap" class="{{favoriteClass}}">
+        <component-icon class="footer-icon" active="{{favoriteClass}}" icon="like" size="40" />
+        <text>{{tweet.favorite_count}}</text>
+      </view>
+      <view>
+        <component-icon class="footer-icon" icon="share" size="40" />
+      </view>
+    </view>
+  </view>
+</view>

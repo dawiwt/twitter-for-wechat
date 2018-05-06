@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "component-icon": "../../components/icon/icon",
+    "card": "../../components/card/card",
+    "drop-down-refresh": "../../components/drop-down-refresh/drop-down-refresh"
+  }
+}

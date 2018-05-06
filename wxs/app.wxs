@@ -1,0 +1,25 @@
+// 时间
+module.exports.date = function(d) {
+  return getDate(d).toLocaleDateString()
+}
+
+// 替换timeline文本中的链接
+module.exports.formatFullText = function(text = "") {
+  return text.replace(getRegExp("https://t.co/.*"), "")
+}
+
+// 替换timeline图片地址
+module.exports.formatMediaUrl = function(url = "") {
+  return url.replace(
+    getRegExp("http://.*/(.*).jpg"),
+    "http://www.dawiwt.com/images/twitter/$1.jpg"
+  )
+}
+
+// 处理图片地址
+// module.exports.formatImageSrc = function(src = "") {
+//   if (getRegExp("^https?://.*")) {
+//     return src
+//   }
+//   return "http://www.dawiwt.com" + src
+// }

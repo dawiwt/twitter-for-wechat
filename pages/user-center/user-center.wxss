@@ -1,0 +1,84 @@
+.user-header {
+  height: 518rpx;
+}
+
+.user-banner {
+  position: relative;
+}
+
+.user-banner .banner-self {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.banner-tent {
+  padding-bottom: 33.3333%;
+}
+
+.user-info {
+  padding: 18rpx 18rpx 0;
+  position: relative;
+}
+
+.user-head {
+  float: left;
+  height: 74rpx;
+  margin-top: 4rpx;
+}
+
+.head-image {
+  top: -96rpx;
+  border-radius: 50%;
+  border: 4rpx solid rgba(255, 255, 255, 1);
+  margin-bottom: 18rpx;
+  z-index: 3;
+}
+
+.user-operation {
+  float: right;
+  height: 74rpx;
+  margin-bottom: 18rpx;
+}
+
+.edit-info {
+  border: 2rpx solid rgb(101, 119, 134);
+  border-radius: 36rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+  line-height: 70rpx;
+  padding: 0 28rpx;
+}
+
+.edit-info,
+.user-screen-name,
+.user-friends {
+  color: rgb(101, 119, 134);
+}
+
+.user-name {
+  clear: both;
+  font-size: 36rpx;
+  line-height: 1.25;
+  font-weight: 700;
+  color: rgb(20, 23, 26);
+}
+
+.user-friends text {
+  font-weight: 700;
+  margin-right: 10rpx;
+  color: rgb(20, 23, 26);
+}
+
+.user-friends text:nth-child(2) {
+  margin-left: 36rpx;
+}
+
+.user-screen-name,
+.user-friends {
+  font-size: 28rpx;
+  line-height: 36rpx;
+  margin-bottom: 18rpx;
+}

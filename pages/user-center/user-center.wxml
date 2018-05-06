@@ -1,0 +1,35 @@
+<!-- user-center.wxml -->
+
+
+<view class="container" bind:touchmove="pullDown">
+  <view class="user-header">
+    <view class="user-banner">
+      <view class="banner-tent" />
+      <component-image class="banner-self" contain src="http://www.dawiwt.com/images/twitter/user-center/{{screen_name}}.jpg" />
+    </view>
+    <view class="user-info">
+      <view class="user-head">
+        <component-image image-class="head-image" cover-color="rgb(230, 236, 240)" width="162rpx" height="162rpx" src="http://www.dawiwt.com/images/twitter/{{screen_name}}.jpg"
+        />
+      </view>
+      <view class="user-operation">
+        <navigator url="#" class="edit-info">编辑个人资料</navigator>
+      </view>
+      <view class="user-name">
+        <text>{{name}}</text>
+      </view>
+      <view class="user-screen-name">
+        <text>@{{screen_name}}</text>
+      </view>
+      <view class="user-friends">
+        <text>38</text>正在关注
+        <text>9023842</text>关注者
+      </view>
+    </view>
+  </view>
+  <cut/>
+  <view class="user-timeline">
+    <card tweet="{{tweet}}" user="{{user}}" />
+    <card tweet="{{tweet}}" user="{{user}}" />
+  </view>
+</view>

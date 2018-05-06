@@ -1,0 +1,22 @@
+.image {
+  position: relative;
+  overflow: hidden;
+}
+.image-cover,
+.image-self {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.image-cover {
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+.image-self {
+  z-index: 1;
+}
+.image-self > image {
+  opacity: 0;
+}

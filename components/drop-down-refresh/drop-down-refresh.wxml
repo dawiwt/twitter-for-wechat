@@ -1,0 +1,15 @@
+<!-- 当scroll-view开启scroll-y时，会阻止本身及父元素的touchmove -->
+<scroll-view scroll-y="{{scroll}}" style="height: {{height}};" scroll-top="{{scrollTop}}" bind:scroll="handlescroll" scroll-with-animation enable-back-to-top>
+  <view animation="{{animationDrop}}" class="drop-down-refresh external-class" 
+    bind:touchstart="handletouchstart" bind:touchmove="handletouchmove"
+    bind:touchend="handletouchend" bind:touchcancel="handletouchcancel">
+    <view class="refresh-status">
+      <view hidden="{{loading}}" animation="{{animationRefreshDownUp}}" class="refresh-down-up">
+        <component-icon icon="pull-down" size="56" active/>
+      </view>
+      <image hidden="{{!loading}}" class="refresh-loding" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMTAwJSI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgZmlsbD0ibm9uZSIgcj0iMTQiIHN0cm9rZS13aWR0aD0iNCIgc3R5bGU9InN0cm9rZTogcmdiKDI5LCAxNjEsIDI0Mik7IG9wYWNpdHk6IDAuMjsiPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIGZpbGw9Im5vbmUiIHI9IjE0IiBzdHJva2Utd2lkdGg9IjQiIHN0eWxlPSJzdHJva2U6IHJnYigyOSwgMTYxLCAyNDIpOyBzdHJva2UtZGFzaGFycmF5OiA4MDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDYwOyI+PC9jaXJjbGU+PC9zdmc+"
+      />
+    </view>
+    <slot/>
+  </view>
+</scroll-view>

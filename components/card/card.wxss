@@ -1,0 +1,123 @@
+.card {
+    display: flex;
+    padding: 28rpx 18rpx;
+    border-top: 1rpx solid #e6ecf0;
+    transition: background-color 0.2s;
+    background-color: #ffffff;
+}
+.card.hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+.card-header {
+    margin-right: 15rpx;
+}
+.card-header .head-image {
+    border-radius: 50%;
+}
+.card-body {
+    font-size: 28rpx;
+    line-height: 1.3em;
+    overflow: hidden;
+}
+.card-author {
+    margin-bottom: 5rpx;
+}
+.author-center {
+    display: inline-block;
+}
+.card-username {
+    font-weight: 700;
+}
+.card-username,
+.card-text {
+    color: rgb(20, 23, 26);
+}
+.card-userid,
+.card-round,
+.card-time,
+.card-footer {
+    color: rgb(101, 119, 134);
+}
+.card-userid {
+    display: inline-block;
+    max-width: 180rpx;
+    margin-left: 10rpx;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+.card-round {
+    padding: 0 10rpx;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+
+.card-footer > view {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon + text {
+    margin-left: 8rpx;
+}
+
+.favorited {
+    color: #e0245e;
+}
+.favorited .footer-icon {
+    animation-name: favorited;
+    animation-duration: 0.25s;
+}
+
+@keyframes favorited {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-photo {
+    margin-top: 20rpx;
+    position: relative;
+    border-radius: 28rpx;
+}
+.photo-fill {
+    padding-bottom: 56.25%;
+}
+.photo-center {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.photo-wrap {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    flex: auto;
+}
+.photo-wrap:not(:last-child) {
+    margin-right: 4rpx;
+}
+
+.photo-wrap .photo-image {
+    flex: auto;
+    height: 100%;
+}
+
+.photo-wrap .photo-image:not(:last-child) {
+    margin-bottom: 4rpx;
+}
