@@ -5,11 +5,11 @@
   <view class="user-header">
     <view class="user-banner">
       <view class="banner-tent" />
-      <component-image class="banner-self" contain src="http://www.dawiwt.com/images/twitter/user-center/{{screen_name}}.jpg" />
+      <component-image class="banner-self" contain src="http://twitter.dawiwt.com/images/twitter/user-center/{{screen_name}}.jpg" />
     </view>
     <view class="user-info">
       <view class="user-head">
-        <component-image image-class="head-image" cover-color="rgb(230, 236, 240)" width="162rpx" height="162rpx" src="http://www.dawiwt.com/images/twitter/{{screen_name}}.jpg"
+        <component-image image-class="head-image" cover-color="rgb(230, 236, 240)" width="162rpx" height="162rpx" src="http://twitter.dawiwt.com/images/twitter/{{screen_name}}.jpg"
         />
       </view>
       <view class="user-operation">

@@ -3,7 +3,7 @@ const promisify = require("../lib/promisify.js")
 const req = promisify(wx.request)
 
 const request = (api, method, options) => {
-  const url = "http://www.dawiwt.com" + api
+  const url = "http://twitter.dawiwt.com" + api
   options.url = url
   options.method = method
   return req(options)

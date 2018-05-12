@@ -2,7 +2,7 @@
 <view class="card" hover-class="hover">
   <view class="card-header">
     <navigator hover-class="none" url="/pages/user-center/user-center?screen_name={{user.screen_name}}&name={{user.name}}">
-      <component-image image-class="head-image" width="88rpx" height="88rpx" src="http://www.dawiwt.com/images/twitter/{{user.screen_name}}.jpg"
+      <component-image image-class="head-image" width="88rpx" height="88rpx" src="http://twitter.dawiwt.com/images/twitter/{{user.screen_name}}.jpg"
       />
     </navigator>
   </view>
@@ -13,7 +13,7 @@
         <view class="card-userid">@{{user.screen_name}}</view>
       </navigator>
       <text class="card-round">·</text>
-      <text class="card-time">{{app.date(user.created_at)}}</text>
+      <text class="card-time">{{app.date(tweet.created_at)}}</text>
     </view>
     <navigator hover-class="none" url="/pages/user-center/user-center?screen_name={{user.screen_name}}&name={{user.name}}">
       <view class="card-text">{{app.formatFullText(tweet.full_text)}}</view>

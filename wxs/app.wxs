@@ -12,7 +12,7 @@ module.exports.formatFullText = function(text = "") {
 module.exports.formatMediaUrl = function(url = "") {
   return url.replace(
     getRegExp("http://.*/(.*).jpg"),
-    "http://www.dawiwt.com/images/twitter/$1.jpg"
+    "http://twitter.dawiwt.com/images/twitter/$1.jpg"
   )
 }
 
@@ -21,5 +21,5 @@ module.exports.formatMediaUrl = function(url = "") {
 //   if (getRegExp("^https?://.*")) {
 //     return src
 //   }
-//   return "http://www.dawiwt.com" + src
+//   return "http://twitter.dawiwt.com" + src
 // }
