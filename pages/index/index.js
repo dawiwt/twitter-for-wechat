@@ -32,6 +32,11 @@ Page({
     },
     handleonpulldownscroll: function(event) {
         const detail = event.detail
+        // iphone在scrollTop为0后依然可以向上滚动
+        // 触发滚动事件，并且scrollTop为负数 
+        // 此时会与下拉刷新功能冲突
+        // 故scrollTop小于0时，不做任何操作
+        if (detail.scrollTop < 0) return
         const isPutUp = detail.scrollTop > scrollTop
         this.setNav(isPutUp ? 'put-up' : 'put-down')
         scrollTop = detail.scrollTop
@@ -54,8 +59,9 @@ Page({
         // 获取twitter数据
         fetchTimeline().then(data => {
             const { globalObjects } = data
+            const tweets = Object.values(globalObjects.tweets)
             this.setData({
-                tweets: Object.values(globalObjects.tweets),
+                tweets: tweets.splice(10+Math.ceil(Math.random()*5)),
                 users: globalObjects.users
             })
             detail.stopPullDownRefresh()
