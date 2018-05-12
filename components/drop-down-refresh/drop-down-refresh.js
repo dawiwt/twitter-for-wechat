@@ -148,14 +148,16 @@ Component({
         },
         dropDownUpAnimationOver: function(data) {
             console.log('dropDownUpAnimationOver')
-            const { dropUp } = this.animation
+            const { dropUp, refreshDownUp } = this.animation
             options.dorpDownTop = 0
             dropUp.translateY(-10).step()
             dropUp.translateY(0).step()
+            refreshDownUp.rotate(0).step()
             this.setData({
                 ...data,
                 loading: false,
-                animationDrop: dropUp.export()
+                animationDrop: dropUp.export(),
+                animationRefreshDownUp: refreshDownUp.export()
             })
         },
         handletouchcancel: function() {
